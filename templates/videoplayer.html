@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>video-player</title>
+</head>
+
+<body>
+    <nav class="flex-div">
+        <div class="nav-left flex-div ">
+            <img src="../static/imag/menu.png" class="menu-icon" alt="">
+            <img src="../static/imag/logo.png" class="logo-icon" width="150px" height="70px">
+
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box">
+                <input type="text" placeholder="search">
+                <img src="../static/imag/search.png ">
+            </div>
+            <img src="../static/imag/mic.png" class="mic-icon">
+
+        </div>
+        <div class="nav-right flex-div">
+            <img src="../static/imag/upload.png">
+            <img src="../static/imag/more.png">
+            <img src="../static/imag/bell.png">
+            <img src="../static/imag/person-1.jpeg" class="user-icon">
+
+        </div>
+
+    </nav>
+
+    <div class="container play-container">
+        <div class="row">
+            <div class="play-video">
+                <!-- <video controls>
+                    <source src="../static/imag/youtube-video.mp4" type="video/mp4">
+
+                </video> -->
+                <iframe  src="https://www.youtube.com/embed/{{d.videoid}}" height=50% width=100%
+                    
+                    allowfullscreen></iframe>
+
+                <div class="tags">
+                    <a href="#">#coding</a>
+                    <a href="#">
+                        <div id="Javascripts"></div>
+                    </a>
+                    <a href="#">#Fullstack Developement</a>
+                    <a href="#">#Happy Students</a>
+
+
+
+
+
+                </div>
+
+                <br>
+                <h2>FullStack Web Developement - Youtube UI clone </h2>
+
+                <div class="play-video-info">
+                    <p>1M view, &bull; 2 days ago</p>
+                    <a href="#"><img src="../static/imag/like.png" a>125</a>
+                    <a href="#"><img src="../static/imag/dislike.png" a>1</a>
+                    <a href="#"><img src="../static/imag/share.png" a>25</a>
+                    <a href="#"><img src="../static/imag/save.png" a>save</a>
+                </div>
+
+                <div class="publisher">
+                    <img src="../static/imag/person-1.jpeg">
+                    <div>
+                        <p>Happy Students</p>
+                        <span>500k Subscribers</span>
+                    </div>
+                    <button type="button">subscribe</button>
+
+                </div>
+                <div class="vid-description">
+                    <p>This is achannel focused on building Tech videos</p>
+                    <p>This is to help Learners to learn Stuffy easily</p>
+                    <hr>
+                    <h4>150 comments</h4>
+                    <div class="add-comment">
+                        <img src="../static/imag/person-1.jpeg" alt="">
+                        <input type="text" placeholder="Write Comments...">
+                    </div>
+                    <div class="old-comments">
+                        <img src="../static/imag/person-2.jpeg" alt="">
+                        <div>
+                            <h3>emily<span>3 days ago</span></h3>
+                            <p> This as aFullstach Development course.Here we are learning with the help of projects
+                                eithe
+                                the help of developing the cole of other websites.</p>
+                            <div class="comment-action">
+                                <img src="../static/imag/like.png" alt="">
+                                <span>300</span>
+                                <img src="./imag/dislike.png" alt="">
+                                <span></span>
+                                <span>Reply</span>
+                                <a href="#">All Replies</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="old-comments">
+                        <img src="../static/imag/person-2.jpeg" alt="">
+                        <div>
+                            <h3>emily<span>3 days ago</span></h3>
+                            <p> This as aFullstach Development course.Here we are learning with the help of projects
+                                eithe
+                                the help of
+                                developing the cole of other websites.</p>
+                            <div class="comment-action">
+                                <img src="../static/imag/like.png" alt="">
+                                <span>300</span>
+                                <img src="../static/imag/dislike.png" alt="">
+                                <span></span>
+                                <span>Reply</span>
+                                <a href="#">All Replies</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="old-comments">
+                        <img src="../static/imag/person-2.jpeg" alt="">
+                        <div>
+                            <h3>emily<span>3 days ago</span></h3>
+                            <p> This as aFullstach Development course.Here we are learning with the help of projects
+                                eithe
+                                the help of
+                                developing the cole of other websites.</p>
+                            <div class="comment-action">
+                                <img src="../static/imag/like.png" alt="">
+                                <span>300</span>
+                                <img src="../static/imag/dislike.png" alt="">
+                                <span></span>
+                                <span>Reply</span>
+                                <a href="#">All Replies</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="old-comments">
+                        <img src="../static/imag/person-2.jpeg" alt="">
+                        <div>
+                            <h3>emily<span>3 days ago</span></h3>
+                            <p> This as aFullstach Development course.Here we are learning with the help of projects
+                                eithe
+                                the help of
+                                developing the cole of other websites.</p>
+                            <div class="comment-action">
+                                <img src="../static/imag/like.png" alt="">
+                                <span>300</span>
+                                <img src="../static/imag/dislike.png" alt="">
+                                <span></span>
+                                <span>Reply</span>
+                                <a href="#">All Replies</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            {%for i in thumbnaillist1%}
+            <div class="right-sidebar">
+                <div class="side-video-list">
+                    <a href="#" class="small-thumbnail1"><img src="../static/imag/{{i.thumbnail}}" ></a>
+
+                    <div class="vid-info">
+                        <a href="#">{{i.description}}</a>
+                        <P>{{i.channel}}</P>
+                        <p>{{i.views}}&bull;{{i.uploaded}}</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="#" class="small-thumbnail1"><img src="../static/imag/thumbnail-1.jpg"></a>
+
+                    <div class="vid-info">
+                        <a href="#">This as a Fullstack Development course.</a>
+                        <P>Happy Students</P>
+                        <p>1M views &bull; 2days ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="#" class="sall-thumbnail1"><img src="../static/imag/thumbnail-2.jpg"></a>
+
+                    <div class="vid-info">
+                        <a href="#">This as a Fullstack Development course.</a>
+                        <P>Happy Students</P>
+                        <p>1M views &bull; 2days ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="#" class="small-thumbnail1"><img src="../static/imag/thumbnail-3.jpg" alt=""></a>
+
+                    <div class="vid-info">
+                        <a href="#">This as a Fullstack Development course.</a>
+                        <P>Happy Students</P>
+                        <p>1M views &bull; 2days ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="#" class="small-thumbnail1"><img src="../static/imag/thumbnail-4.jpg" alt=""></a>
+
+                    <div class="vid-info">
+                        <a href="#">This as a Fullstack Development course.</a>
+                        <P>Happy Students</P>
+                        <p>1M views &bull; 2days ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="#" class="samll-thumbnail1"><img src="../static/imag/thumbnail-4.jpg" alt=""></a>
+
+                    <div class="vid-info">
+                        <a href="#">This as a Fullstack Development course.</a>
+                        <P>Happy Students</P>
+                        <p>1M views &bull; 2days ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="#" class="small-thumbnail1"><img src="../static/imag/thumbnail-6.jpg" alt=""></a>
+
+                    <div class="vid-info">
+                        <a href="#">This as a Fullstack Development course.</a>
+                        <P>Happy Students</P>
+                        <p>1M views &bull; 2days ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="#" class="small-thumbnail1"><img src="../static/imag/thumbnail-7.jpg" alt=""></a>
+
+                    <div class="vid-info">
+                        <a href="#">This as a Fullstack Development course.</a>
+                        <P>Happy Students</P>
+                        <p>1M views &bull; 2days ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="#" class="small-thumbnail1"><img src="../static/imag/thumbnail-8.jpg" alt=""></a>
+
+                    <div class="vid-info">
+                        <a href="#">This as a Fullstack Development course.</a>
+                        <P>Happy Students</P>
+                        <p>1M views &bull; 2days ago</p>
+                    </div>
+                </div>
+
+
+            </div>
+            {%endfor%}
+        </div>
+
+
+
+        <script src="../static/script.js"></script>
+</body>
+
+</html>

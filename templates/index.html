@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css"> 
+    <title>Youtube UI</title>
+    <script src="https://kit.fontawesome.com/51b246afc3.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <nav class="flex-div">
+        <div class="nav-left flex-div ">
+        <img src="../static/imag/menu.png"  class="menu-icon"alt="">
+        <img src="../static/imag/logo.png"   class="logo-icon" width="150px" height="70px">
+
+        </div>
+        <div class="nav-middle flex-div">
+         <div class="search-box">
+            <input type="text" placeholder="search">
+            <img src="../static/imag/search.png " alt="">
+         </div> 
+         <img src="../static/imag/mic.png"  class="mic-icon">
+
+        </div>
+        <div class="nav-right flex-div">
+            <img src="../static/imag/upload.png" alt="">
+            <img src="../static/imag/more.png" alt="">
+            <img src="../static/imag/bell.png" alt="">
+            <img src="../static/imag/person-1.jpeg" class="user-icon">
+
+        </div>
+
+     </nav>
+    <div class="sidebar small-sidebar">
+        <div class="shortcut-links">
+            <a href="#"><img src="../static/imag/home.png"/> <p>Home</p></a>
+            <a href="#"><img src="../static/imag/explore.png "/><p>Explore</p></a>
+            <a href="#"><img src="../static/imag/subscription.png"/><p>Subscribed</p></a>
+            <a href="#"><img src="../static/imag/library.png" /><p>Library</p></a>
+            <a href="#"><img src="../static/imag/history.png" /><p>History</p></a>
+            <a href="#"><img src="../static/imag/playlist.png" /><p>Playlsit</p></a>
+            <a href="#"><img src="../static/imag/messages.png" /><p>Messages</p></a>
+            <a href="#"><img src="../static/imag/show-more.png" /><p>show-more</p></a>
+        </div>
+        <div class="subscribed-list">
+            <h3>Subscribed</h3>
+            <a href="#"><img src="../static/imag/person-1.jpeg"><p>Python</p></a>
+            <a href="#"><img src="../static/imag/person-2.jpeg "><p>Java</p></a>
+            <a href="#"><img src="../static/imag/person-3.jpeg"><p>Javascript</p></a>
+            <a href="#"><img src="../static/imag/person-4.jpeg"><p>React</p></a>
+            <a href="#"><img src="../static/imag/person-5.jpeg"><p>C</p></a>
+            <a href="#"><img src="../static/imag/person-6.jpeg"><p>C++</p></a>
+        
+        </div>
+        </div>
+    <div class="container large-container">
+            <div class="banner">
+                <img src="../static/imag/banner.jpg" alt="">
+            </div>
+            <div class="list-container">
+                {%for i in thumbnaillist1%}
+                <div class="vid-list">
+                    <a href="{{url_for('play',id=i.videoid)}}">
+                    
+                        <!-- <a href="/a/{{i.id}}"></a> -->
+                        <img src="{{i.thumbnail}}">
+                    </a>
+                    
+                 <img src="{{i.profile}}">
+                   <div class="vid-info">
+                    <!-- <a href="#"></a> -->
+
+                        <P>{{i.description}}</P>
+                        <p>{{i.channel}}</p>
+                        <p>{{i.views}}</p>
+                        <p>{{i.uploaded}}</p>
+
+                    </div>
+                </div>
+               
+
+                
+                    <!-- <div class="vid-list">
+                        <a href="#"><img src="../static/imag/thumbnail-3{{loop.index}}.jpg" thumbnail></a>
+                        <img src="../static/imag/person-2{{loop.index}}.jpeg">
+                        <div class="vid-info">
+                            <a href="#">This ia a video focused on frontend developement.This is create for absolute.
+                                we also have other videos. now we are replicating Youtuble UI</a>
+                            <p>Happy students</p>
+                            <p>1M views &bull;2 days </p>
+                
+                        </div>
+                    </div>
+                
+                    <div class="vid-list">
+                                <a href="#"><img src="../static/imag/thumbnail-3{{loop.index}}.jpg" thumbnail></a>
+                                <img src="../static/imag/person-3{{loop.index}}.jpeg">
+                                <div class="vid-info">
+                                    <a href="#">This ia a video focused on frontend developement.This is create for absolute.
+                                        we also have other videos. now we are replicating Youtuble UI</a>
+                                    <p>Happy students</p>
+                                    <p>1M views &bull;2 days </p>
+                        
+                                </div>
+                    </div>
+                
+                                    <div class="vid-list">
+                                        <a href="#"><img src="../static/imag/thumbnail-4{{loop.index}}.jpg" thumbnail></a>
+                                        <img src="../static/imag/person-4{{loop.index}}.jpeg">
+                                        <div class="vid-info">
+                                            <a href="#">This ia a video focused on frontend developement.This is create for absolute.
+                                                we also have other videos. now we are replicating Youtuble UI</a>
+                                            <p>Happy students</p>
+                                            <p>1M views &bull;2 days </p>
+                                
+                                        </div>
+                                    </div>
+                
+                                            <div class="vid-list">
+                                                <a href="#"><img src="../static/imag/thumbnail-4{{loop.index}}.jpg" thumbnail></a>
+                                                <img src="../static/imag/person-5{{loop.index}}.jpeg">
+                                                <div class="vid-info">
+                                                    <a href="#">This ia a video focused on frontend developement.This is create for absolute.
+                                                    we also have other videos. now we are replicating Youtuble UI</a>
+                                                    <p>Happy students</p>
+                                                    <p>1M views &bull;2 days </p>
+                                        
+                                            </div>
+                                                </div>
+                                                
+                                                    <div class="vid-list">
+                                                        <a href="#"><img src="../static/imag/thumbnail-6{{loop.index}}.jpg" thumbnail></a>
+                                                        <img src="../static/imag/person-6{{loop.index}}.jpeg">
+                                                            <div class="vid-info">
+                                                                <a href="#">This ia a video focused on frontend developement.This is create for absolute.
+                                                                    we also have other videos. now we are replicating Youtuble UI</a>
+                                                                <p>Happy students</p>
+                                                                <p>1M views &bull;2 days </p>
+                                                            </div>                                                 
+                                                    </div>
+                                                    <div class="vid-list">
+                                                        <a href="#"><img src="../static/imag/thumbnail-7{{loop.index}}.jpg" thumbnail></a>
+                                                        <img src="../static/imag/person-5{{loop.index}}.jpeg">
+                                                        <div class="vid-info">
+                                                            <a href="#">This ia a video focused on frontend developement.This is create for absolute.
+                                                            we also have other videos. now we are replicating Youtuble UI</a>
+                                                            <p>Happy students</p>
+                                                            <p>1M views &bull;2 days </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vid-list">
+                                                        <a href="#"><img src="../static/imag/thumbnail-8{{loop.index}}.jpg" thumbnail></a>
+                                                        <img src="../static/imag/person-2{{loop.index}}.jpeg">
+                                                        <div class="vid-info">
+                                                            <a href="#" class="description"><p>{{i.description}}This ia a video focused on frontend developement.This is create for absolute.
+                                                                we also have other videos. now we are replicating Youtuble UI</p></a>
+                                                            <p class="channel">{{i.channel}}Happy students</p>
+                                                            <p class="views">{{i.views}}</p> &bull; {{i.uploaded}} </p>
+                                                        </div>
+                                                    </div>
+                                                
+
+                                            
+                                            </div> -->
+                {%endfor%}
+            </div>
+        </div>
+
+
+     <script src="../static/script.js "></script>
+    
+</body>
+</html>
